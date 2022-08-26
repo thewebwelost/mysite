@@ -1,6 +1,12 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import ImageGrid from '../components/ImageGrid';
+import {
+  SiInstagram,
+  SiLinkedin,
+  SiTwitter,
+  SiGmail,
+  SiGithub,
+} from 'react-icons/si';
 
 export default function Home() {
   return (
@@ -20,7 +26,7 @@ export default function Home() {
           <ImageGrid />
 
           <div className={'max-w-xs'}>
-            <h1 className={'text-3xl'}>Hello</h1>
+            <h1 className={'text-3xl italic font-bold'}>Hello there!</h1>
             <h2 className={'text-xl font-bold mt-3 underline'}>
               My name is Dmitry Krasnov
             </h2>
@@ -28,15 +34,59 @@ export default function Home() {
               I am a software developer from San Diego 🇺🇸
             </p>
 
-            <p></p>
+            <p className={'mt-3'}>
+              There are some social links, please let me know!
+            </p>
 
-            <ul className={'mt-3'}>
-              <li>one</li>
-              <li>two</li>
-              <li>three</li>
+            <ul className={'flex text-3xl mt-5'}>
+              <li className={'mr-3'}>
+                <a
+                  href={'https://www.instagram.com/thawebwelost/'}
+                  target={'_blank'}
+                  rel={'noreferrer'}
+                >
+                  <SiInstagram color={'#E4405F'} />
+                </a>
+              </li>
+              <li className={'mr-3'}>
+                <a
+                  href={'https://www.linkedin.com/in/dmitry-krasnov-816a92112/'}
+                  target={'_blank'}
+                  rel={'noreferrer'}
+                >
+                  <SiLinkedin color={'#0A66C2'} />
+                </a>
+              </li>
+              <li className={'mr-3'}>
+                <a
+                  href={'https://twitter.com/thewebwelost'}
+                  target={'_blank'}
+                  rel={'noreferrer'}
+                >
+                  <SiTwitter color={'#1DA1F2'} />
+                </a>
+              </li>
+              <li className={'mr-3'}>
+                <a
+                  href={'mailto:thawebwelost@gmail.com'}
+                  target={'_blank'}
+                  rel={'noreferrer'}
+                >
+                  <SiGmail color={'#EA4335'} />
+                </a>
+              </li>
+              <li>
+                <a
+                  href={'https://github.com/thewebwelost'}
+                  target={'_blank'}
+                  rel={'noreferrer'}
+                >
+                  <SiGithub color={'#181717'} />
+                </a>
+              </li>
             </ul>
 
-            <p>
+            <p className={'mt-5'}>
               You can check{' '}
               <a
                 className={'text-white bg-sky-500 hover:bg-sky-700'}
@@ -46,7 +96,7 @@ export default function Home() {
               >
                 my resume
               </a>{' '}
-              for more details
+              for more details.
             </p>
           </div>
         </div>
