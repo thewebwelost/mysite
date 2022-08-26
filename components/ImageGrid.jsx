@@ -20,7 +20,13 @@ function ImageGrid() {
           'w-24 h-24 relative transition-transform hover:scale-125 hover:z-50'
         }
       >
-        <Image src={imageUrl} layout={'fill'} objectFit={'cover'} alt={''} />
+        <Image
+          src={imageUrl}
+          layout={'fill'}
+          objectFit={'cover'}
+          placeholder={'blur'}
+          alt={''}
+        />
       </div>
     ));
   };
