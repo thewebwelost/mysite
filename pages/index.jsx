@@ -18,11 +18,13 @@ export default function Home() {
       </Head>
 
       <main
-        className={
-          'h-screen flex flex-col justify-center items-center font-mono'
-        }
+        className={'h-screen flex justify-center items-center px-2 font-mono'}
       >
-        <div className={'flex justify-center items-center'}>
+        <div
+          className={
+            'flex flex-col-reverse justify-center items-center sm:flex-row'
+          }
+        >
           <ImageGrid />
 
           <div className={'max-w-xs'}>
@@ -38,7 +40,9 @@ export default function Home() {
               There are some social links, please let me know!
             </p>
 
-            <ul className={'flex text-3xl mt-5'}>
+            <ul
+              className={'flex justify-center text-3xl mt-5 sm:justify-start'}
+            >
               <li className={'mr-3'}>
                 <a
                   href={'https://www.instagram.com/thawebwelost/'}

@@ -17,7 +17,7 @@ function ImageGrid() {
       <div
         key={i}
         className={
-          'w-24 h-24 relative transition-transform hover:scale-125 hover:z-50'
+          'relative w-16 h-16 transition-transform hover:scale-125 hover:z-50 sm:w-24 sm:h-24 sm:mt-0'
         }
       >
         <Image
@@ -44,7 +44,9 @@ function ImageGrid() {
   ];
 
   return (
-    <div className={'grid grid-cols-3 gap-1 mr-10'}>{renderItems(images)}</div>
+    <div className={'mt-6 grid grid-cols-3 gap-1 sm:mr-10 sm:mt-0'}>
+      {renderItems(images)}
+    </div>
   );
 }
 
