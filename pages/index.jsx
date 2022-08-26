@@ -33,7 +33,7 @@ export default function Home() {
               My name is Dmitry Krasnov
             </h2>
             <p className={'mt-3'}>
-              I am a software developer from San Diego 🇺🇸
+              I am a software developer from San Diego, CA 🇺🇸
             </p>
 
             <p className={'mt-3'}>
