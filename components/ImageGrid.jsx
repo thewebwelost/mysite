@@ -17,7 +17,7 @@ function ImageGrid() {
       <div
         key={i}
         className={
-          'relative w-16 h-16 transition-transform hover:scale-125 hover:z-50 sm:w-24 sm:h-24 sm:mt-0'
+          'relative w-16 h-16 transition-transform hover:scale-125 hover:z-50 xs:w-20 xs:h-20 sm:w-24 sm:h-24 sm:mt-0'
         }
       >
         <Image
