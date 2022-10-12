@@ -1,40 +1,30 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
 
-function Card({ imageUrl, handleClick = () => {} }) {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const open = 'translate-x-[0%]';
+function Card({ url, title, text, isOpen, handleClick = () => {} }) {
+  const open = 'translate-x-[20%]';
   const closed = 'translate-x-[100%]';
-
-  const handleCardClick = () => {
-    handleClick();
-    setIsOpen(!isOpen);
-  };
 
   return (
     <div
       className={
         'relative w-4/12 h-40 overflow-hidden cursor-pointer border-2 border-white'
       }
-      onClick={handleCardClick}
+      onClick={handleClick}
     >
       {/* content shim */}
       <div
-        className={`absolute z-20 top-0 left-0 w-full h-full p-3 pr-5 bg-black text-white text-xs transition-transform ${
+        className={`absolute z-20 top-0 left-0 w-full h-full p-3 pr-10 bg-stone-900/50 text-white text-xs transition-transform ${
           isOpen ? open : closed
         }`}
       >
-        <h3 className={'font-bold capitalize mb-1 text-sm'}>content</h3>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint nam
-          excepturi natus saepe nihil
-        </p>
+        <h3 className={'font-bold capitalize mb-1 text-sm'}>{title}</h3>
+        <p>{text}</p>
       </div>
 
       {/* bg image */}
       <Image
-        src={imageUrl}
+        src={url}
         layout="fill"
         objectFit="cover"
         placeholder="blur"
