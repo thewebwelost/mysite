@@ -22,10 +22,12 @@ export default function Home() {
       >
         <div
           className={
-            'flex flex-col-reverse justify-center items-center sm:flex-row'
+            'flex flex-col-reverse justify-center items-center w-full max-w-[1024px] sm:flex-row'
           }
         >
-          <ImageGrid />
+          <div className="w-full">
+            <ImageGrid />
+          </div>
 
           <div className={'max-w-xs'}>
             <h1 className={'text-3xl italic font-bold'}>Hello there!</h1>
