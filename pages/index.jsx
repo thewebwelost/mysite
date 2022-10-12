@@ -1,12 +1,6 @@
 import Head from 'next/head';
 import ImageGrid from '../components/ImageGrid';
-import {
-  SiInstagram,
-  SiLinkedin,
-  SiTwitter,
-  SiGmail,
-  SiGithub,
-} from 'react-icons/si';
+import Socials from '../components/Socials';
 
 export default function Home() {
   return (
@@ -17,80 +11,29 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main
-        className={'h-screen flex justify-center items-center px-2 font-mono'}
-      >
+      <main className={'h-screen flex justify-center px-2 font-mono'}>
         <div
           className={
-            'flex flex-col-reverse justify-center items-center w-full max-w-[1024px] sm:flex-row'
+            'flex flex-col justify-center items-center w-full max-w-[1024px] mt-14'
           }
         >
-          <div className="w-full">
-            <ImageGrid />
-          </div>
+          <h1 className={'text-3xl italic font-bold'}>👋 Hello there!</h1>
+          <div className={'mt-5'}>
+            <div className="flex">
+              <div className="mr-16">
+                <h2 className={'text-xl font-bold mt-3 underline'}>
+                  My name is Dmitry Krasnov
+                </h2>
+                <p className={'mt-3'}>
+                  I am a software developer from San Diego, CA 🇺🇸
+                </p>
+                <p className={'mt-3'}>
+                  There are some social links, please let me know!
+                </p>
 
-          <div className={'max-w-xs'}>
-            <h1 className={'text-3xl italic font-bold'}>Hello there!</h1>
-            <h2 className={'text-xl font-bold mt-3 underline'}>
-              My name is Dmitry Krasnov
-            </h2>
-            <p className={'mt-3'}>
-              I am a software developer from San Diego, CA 🇺🇸
-            </p>
-
-            <p className={'mt-3'}>
-              There are some social links, please let me know!
-            </p>
-
-            <ul
-              className={'flex justify-center text-3xl mt-5 sm:justify-start'}
-            >
-              <li className={'mr-3'}>
-                <a
-                  href={'https://www.instagram.com/thawebwelost/'}
-                  target={'_blank'}
-                  rel={'noreferrer'}
-                >
-                  <SiInstagram color={'#E4405F'} />
-                </a>
-              </li>
-              <li className={'mr-3'}>
-                <a
-                  href={'https://www.linkedin.com/in/dmitry-krasnov-816a92112/'}
-                  target={'_blank'}
-                  rel={'noreferrer'}
-                >
-                  <SiLinkedin color={'#0A66C2'} />
-                </a>
-              </li>
-              <li className={'mr-3'}>
-                <a
-                  href={'https://twitter.com/thewebwelost'}
-                  target={'_blank'}
-                  rel={'noreferrer'}
-                >
-                  <SiTwitter color={'#1DA1F2'} />
-                </a>
-              </li>
-              <li className={'mr-3'}>
-                <a
-                  href={'mailto:thawebwelost@gmail.com'}
-                  target={'_blank'}
-                  rel={'noreferrer'}
-                >
-                  <SiGmail color={'#EA4335'} />
-                </a>
-              </li>
-              <li>
-                <a
-                  href={'https://github.com/thewebwelost'}
-                  target={'_blank'}
-                  rel={'noreferrer'}
-                >
-                  <SiGithub color={'#181717'} />
-                </a>
-              </li>
-            </ul>
+                <Socials />
+              </div>
+            </div>
 
             <p className={'mt-5'}>
               You can check{' '}
@@ -104,6 +47,10 @@ export default function Home() {
               </a>{' '}
               for more details.
             </p>
+          </div>
+
+          <div className="w-full mt-14 flex justify-center">
+            <ImageGrid />
           </div>
         </div>
       </main>

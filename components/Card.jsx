@@ -12,8 +12,9 @@ function Card({ imageUrl }) {
       className={'relative w-4/12 h-40 overflow-hidden'}
       onClick={() => setIsOpen(!isOpen)}
     >
+      {/* content shim */}
       <div
-        className={`absolute z-10 top-0 left-0 w-full h-full p-3 pr-5 bg-black text-white text-xs transition-transform ${
+        className={`absolute z-20 top-0 left-0 w-full h-full p-3 pr-5 bg-black text-white text-xs transition-transform ${
           isOpen ? open : closed
         }`}
       >
@@ -24,6 +25,7 @@ function Card({ imageUrl }) {
         </p>
       </div>
 
+      {/* bg image */}
       <Image
         src={imageUrl}
         layout="fill"
