@@ -1,16 +1,23 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
 
-function Card({ imageUrl }) {
+function Card({ imageUrl, handleClick = () => {} }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const open = 'translate-x-[0%]';
   const closed = 'translate-x-[100%]';
 
+  const handleCardClick = () => {
+    handleClick();
+    setIsOpen(!isOpen);
+  };
+
   return (
     <div
-      className={'relative w-4/12 h-40 overflow-hidden'}
-      onClick={() => setIsOpen(!isOpen)}
+      className={
+        'relative w-4/12 h-40 overflow-hidden cursor-pointer border-2 border-white'
+      }
+      onClick={handleCardClick}
     >
       {/* content shim */}
       <div
@@ -18,7 +25,7 @@ function Card({ imageUrl }) {
           isOpen ? open : closed
         }`}
       >
-        <h3 className="font-bold capitalize mb-1 text-sm">content</h3>
+        <h3 className={'font-bold capitalize mb-1 text-sm'}>content</h3>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint nam
           excepturi natus saepe nihil

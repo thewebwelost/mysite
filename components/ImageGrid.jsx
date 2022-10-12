@@ -12,6 +12,14 @@ import photo8 from '/public/images/photo_8.jpg';
 import photo9 from '/public/images/photo_9.jpg';
 import Card from './Card';
 
+const cards = [
+  {
+    url: photo4,
+    title: 'Some text',
+    text: 'More text here',
+  },
+];
+
 function ImageGrid() {
   const images = [
     photo4,

@@ -19,18 +19,18 @@ export default function Home() {
         >
           <h1 className={'text-3xl italic font-bold'}>👋 Hello there!</h1>
           <div className={'mt-5'}>
-            <div className="flex">
-              <div className="mr-16">
-                <h2 className={'text-xl font-bold mt-3 underline'}>
-                  My name is Dmitry Krasnov
-                </h2>
-                <p className={'mt-3'}>
-                  I am a software developer from San Diego, CA 🇺🇸
-                </p>
-                <p className={'mt-3'}>
-                  There are some social links, please let me know!
-                </p>
+            <div className={'p-3'}>
+              <h2 className={'text-xl font-bold mt-3 underline'}>
+                My name is Dmitry Krasnov
+              </h2>
+              <p className={'mt-3'}>
+                I am a software developer from San Diego, CA 🇺🇸
+              </p>
+              <p className={'mt-3'}>
+                There are some social links, please let me know!
+              </p>
 
+              <div className="flex justify-center">
                 <Socials />
               </div>
             </div>
@@ -49,7 +49,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="w-full mt-14 flex justify-center">
+          <div className={'w-full mt-14 flex justify-center'}>
             <ImageGrid />
           </div>
         </div>
